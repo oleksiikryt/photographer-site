@@ -5,11 +5,27 @@
 <meta name="viewport" content = "width = device-width, initial-scale = 1.0">
 <link rel = "stylesheet" type = "text/css" href = "style.css">
 <link href="https://fonts.googleapis.com/css?family=Philosopher:400i" rel="stylesheet">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.7.1/rellax.min.js"></script> -->
-<!-- <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"> -->
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+      width: 100%;
+      height: 80%;
+  }
+  </style>
+
 </head>
-<body data-scroll-speed="7">
+
+
+<body>
 
 <div class="upcurtine">
 </div>
@@ -19,121 +35,56 @@
 
 <div class="progressline">
 </div>
+
 <div class="progresslinepadding">
 </div>
 
 <div class="philosophy">
   <div class="philosophy-mask">
   <div class="philosophy-content" >
-    <h1 style="color: rgb(50,60,50);letter-spacing:7px;font-family: 'Philosopher', sans-serif;">Тут має бути написано шось філософське про фотографію.</h1>
-    <h2 style="float:right; color: rgb(50,60,50);letter-spacing:7px;font-family: 'Philosopher', sans-serif;">Лілія Гарасимюк</h2>
+    <h1 style="color: rgb(50,60,50);letter-spacing:7px;
+    font-family: 'Philosopher', sans-serif;">Лілія Гарасимюк</h1>
   </div>
-
-  </div>
-</div>
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<!-- <div data-aos="example-anim3" style="margin-top:30vh;padding-left: 10vw;padding-right:10vw;">
-  <h1 style="color: rgb(50,60,50);letter-spacing:7px;font-family: 'Philosopher', sans-serif;">Тут має бути написано шось мудре і філософське про фотографію.</h1>
-  <h1 style="float:right; color: rgb(50,60,50);letter-spacing:7px;font-family: 'Philosopher', sans-serif;">Лілія Гарасимюк</h1>
-</div> -->
-<br>
-<br>
-
-
-
-
-<div  data-scroll-showCallback="customFunction('Visible')"  data-scroll="centerHorizontal once toggle(.visible22, .invisible22) offset(0,50px)" class="item" style="background-image:url('images/22.jpeg');margin-left:100px">
-
-  <div   data-scroll="once toggle(.animateIn, .animateOut) offset(0,50px)" class="inneritem" style="">
   </div>
 </div>
 
 
+<div style = "height : 70vw">
 
-<br>
-<br>
-<br>
+  <div id="demo" class="carousel slide" data-ride="carousel" >
 
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
 
-<div class="item" data-scroll-showCallback="customFunction('Visible')"  data-scroll="once toggle(.visible22, .invisible22) offset(0,50px)" style="background-image:url('images/33.jpeg');margin-left:100px">
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/22.jpeg" alt="Los Angeles" width="1000" height="400">
+      </div>
+      <div class="carousel-item">
+        <img src="images/44.jpeg" alt="Chicago" width="1000" height="400">
+      </div>
+      <div class="carousel-item">
+        <img src="images/33.jpeg" alt="New York" width="1000" height="400">
+      </div>
+    </div>
 
-  <div  data-scroll="once toggle(.animateIn, .animateOut) offset(0,50px)" class="inneritem">
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
   </div>
+
 </div>
 
-<br>
-<br>
-<br>
 
-
-<div data-scroll-showCallback="customFunction('Visible')"  data-scroll="once toggle(.visible22, .invisible22) offset(0,50px)" class="item" style="background-image:url('images/44.jpeg');margin-left:100px">
-
-  <div  data-scroll="once toggle(.animateIn, .animateOut) offset(0,50px)" class="inneritem">
-  </div>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
-
-<script src="ScrollTrigger.min.js"></script>
-
-
-<script>
-
-
-document.addEventListener('DOMContentLoaded', function(){
-var listOfSomething=[];
-      var scope = {};
-        var trigger = new ScrollTrigger();
-      trigger.callScope = scope;
-      scope.customFunction = function(value) {
-        listOfSomething.push(this); // this refers to the html element coming into the viewport
-
-      };
-
-        var loop = function(scrollLeft, scrollTop, width, height){
-
-          for (var i = 0; i < listOfSomething.length; i++) {
-            // console.log(scrollLeft, scrollTop, width, height);
-            listOfSomething[i].style.backgroundPosition = '0px '+(scrollTop/7)+'px';
-              console.log(listOfSomething[i].style.backgroundPosition);
-          }
-        };
-        trigger.attach(loop);
-
-});
-
-
-
-</script>
 
 
 
