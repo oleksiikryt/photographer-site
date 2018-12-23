@@ -1,0 +1,18 @@
+.form-control {
+  border-radius: 0;
+  height: calc(3.25rem + 2px);
+}
+.user-input,.telephone-input {
+  display:inline-block;
+  width:49%;
+}
+.telephone-input {
+  float: right;
+}
+.btn {
+  border-radius: 0;
+  padding: .8rem;
+}
+.mail-address,.telephone-number {
+  
+}

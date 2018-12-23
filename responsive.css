@@ -46,10 +46,50 @@
 }
 
 
+.animation-fade-up {
+  animation-name: fade-up;
+  animation-duration: 0.8s;
+  animation-timing-function: ease;
+}
+
+
+.fa {
+  color:                                  black;
+  padding: 20px;
+  font-size: 24px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.custom-collapse-menu--visible {
+  animation-name: slide-from-right !important;
+  animation-duration: 0.4s !important;
+  animation-timing-function: ease !important;
+  animation-fill-mode: forwards;
+}
+
+.custom-collapse-menu--hidden {
+  animation-name: slide-to-right !important;
+  animation-duration: 0.4s !important;
+  animation-timing-function: ease !important;
+  animation-fill-mode: forwards;
+}
+
+
+.fa-close {
+  font-size: 1em;
+  background-color:                 white;
+  color :                           black;
+}
+
+
+
 @media all and (min-width : 0px) and (max-width : 996px) {
   .custom-collapse-menu {
     position : fixed;
-    background-color: black;
+    background-color:                white;
     z-index: 10000;
     height: 100vh;
     width: 100vw;
@@ -58,7 +98,7 @@
     padding-top: 5vh;
   }
   .subject-link {
-    color : white !important;
+    color :                         black !important;
   }
   .custom-close-button {
     position: absolute;
@@ -66,7 +106,7 @@
     top : 20px;
     border: none;
     outline: none !important;
-    background-color: black;
+    background-color:                white;
   }
 }
 
@@ -144,6 +184,8 @@
     background-color: white !important;
     opacity: 1 !important;
     color: white !important;
+    border-radius: 10% !important;
+    padding: 6px 7px !important;
   }
   .photo-art-row {
     margin: 0;
@@ -178,12 +220,10 @@
     background-color: white !important;
     opacity: 1 !important;
     color: white !important;
-    border-radius: 20% !important;
-    padding: 10px 10px 10px 10px !important;
+    border-radius: 10% !important;
+    padding: 6px 7px !important;
   }
-  .photo-art-row {
-    margin: 0 0;
-  }
+
 }
 
 
@@ -209,42 +249,4 @@
   .custom-close-button {
     display: none;
   }
-}
-
-.animation-fade-up{
-  animation-name: fade-up;
-  animation-duration: 0.8s;
-  animation-timing-function: ease;
-}
-
-
-.fa {
-  color: black;
-  padding: 20px;
-  font-size: 24px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-}
-
-
-.custom-collapse-menu--visible {
-  animation-name: slide-from-right !important;
-  animation-duration: 0.4s !important;
-  animation-timing-function: ease !important;
-  animation-fill-mode: forwards;
-}
-
-.custom-collapse-menu--hidden {
-  animation-name: slide-to-right !important;
-  animation-duration: 0.4s !important;
-  animation-timing-function: ease !important;
-  animation-fill-mode: forwards;
-}
-
-
-.fa-close {
-  font-size: 1em;
-  background-color: black;
-  color :white;
 }
